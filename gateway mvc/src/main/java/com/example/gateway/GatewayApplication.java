@@ -14,7 +14,8 @@ public class GatewayApplication {
     @Bean
     public RouterFunction<ServerResponse> myRouteLocator() {
         return route().GET("/**", req ->
-                        ServerResponse.permanentRedirect(URI.create("http://localhost:8000" + req.path())).build())
+                        ServerResponse.permanentRedirect(URI.create("http://localhost:8010" + req.path())).build())
+                .after((req, res) -> {System.out.println("got it! " + res.statusCode()); return res;})
                 .build();
     }
 
