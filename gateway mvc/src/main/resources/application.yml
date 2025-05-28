@@ -7,3 +7,12 @@ server:
 #    org.springframework.http.server.reactive: DEBUG
 #    org.springframework.web.reactive: DEBUG
 #    reactor.ipc.netty: DEBUG
+#spring:
+#  cloud:
+#    gateway:
+#      mvc:
+#        routes:
+#          - id: static-proxy
+#            uri: http://localhost:8080
+#            predicates:
+#              - Path=/**

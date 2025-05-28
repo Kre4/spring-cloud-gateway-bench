@@ -13,7 +13,7 @@ public class GatewayApplication {
 	public RouteLocator myRouteLocator(RouteLocatorBuilder builder) {
 		return builder.routes()
 				.route(r -> r.path("/**")
-						.uri("http://localhost:8000"))
+						.uri("http://localhost:8081"))
 				.build();
 	}
 
