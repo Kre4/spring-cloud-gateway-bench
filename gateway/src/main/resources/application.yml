@@ -1,6 +1,26 @@
 server:
   port: 8082
 
+
+#spring:
+#  application:
+#    name: api-gateway
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: file-service
+#          uri: http://localhost:8079  # Прямое указание URL сервиса
+#          predicates:
+#            - Path=/api/**
+#      httpclient:
+#        multipart:
+#          max-in-memory-size: 10MB
+#          max-headers-size: 20KB
+#          max-request-size: 10MB
+
+logging:
+  level:
+    web: trace
 #logging:
 #  level:
 #    org.springframework.cloud.gateway: TRACE
